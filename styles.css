@@ -3,9 +3,10 @@
     /* Climate Change Radial Gradients */
     --gradient-solar-temperature: radial-gradient(circle, #ffcc00 0%, #ff6600 100%); /* Solar/Temperature */
     --gradient-sea-level: radial-gradient(circle, #00aaff 0%, #005577 100%); /* Sea Level */
-    --gradient-pollution: radial-gradient(circle, #09203f 0%, #537895 100%); /* Pollution */
-    --gradient-glaciers: radial-gradient(circle, #a8d8e8 0%, #ffffff 100%); /* Glaciers */
-    --gradient-vegetation-animals: radial-gradient(circle, #4caf50 0%, #a5d6a7 100%); /* Vegetation/Animals */
+    --gradient-pollution: radial-gradient(circle, #2a6a9a 0%, #09203f 100%); /* Pollution */
+    --gradient-glaciers: radial-gradient(circle, #aecbd5 0%, #3a86a0 100%); /* Glaciers */
+    --gradient-vegetation-animals: radial-gradient(circle, #8dce8e 0%, #39b43d 100%); /* Vegetation/Animals */
+    --gradient-main: radial-gradient(circle, #ffffff 0%, #b7bdb7 100%); /* Vegetation/Animals */
 
     /* Font Sizes */
     --font-size-small: 0.875rem; /* Small text size */
@@ -47,4 +48,8 @@
     height: 100%;
     pointer-events: none; /* Ensures scroll and clicks are unaffected */
     z-index: -1; /* Place behind the content */
+}
+
+body {
+    background-image: var(--gradient-main);
 }
