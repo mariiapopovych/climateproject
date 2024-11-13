@@ -1,0 +1,50 @@
+
+:root {
+    /* Climate Change Radial Gradients */
+    --gradient-solar-temperature: radial-gradient(circle, #ffcc00 0%, #ff6600 100%); /* Solar/Temperature */
+    --gradient-sea-level: radial-gradient(circle, #00aaff 0%, #005577 100%); /* Sea Level */
+    --gradient-pollution: radial-gradient(circle, #09203f 0%, #537895 100%); /* Pollution */
+    --gradient-glaciers: radial-gradient(circle, #a8d8e8 0%, #ffffff 100%); /* Glaciers */
+    --gradient-vegetation-animals: radial-gradient(circle, #4caf50 0%, #a5d6a7 100%); /* Vegetation/Animals */
+
+    /* Font Sizes */
+    --font-size-small: 0.875rem; /* Small text size */
+    --font-size-medium: 1rem; /* Medium text size */
+    --font-size-large: 1.5rem; /* Large text size */
+    --font-size-xlarge: 3rem; /* Extra large text size */
+
+    /* Font families */
+    --font-family-sans: 'Helvetica Neue', Arial, sans-serif; /* Sans-serif font family */
+    
+    /* Colors */
+    --color-primary: black;
+    --color-secondary: #FDF8F3;
+
+    --color-green-light: #8ED081; /* Light green */
+    --color-green-dark: #42714C; /* Dark green */
+    --color-green-accent: #ACFFAA; /* Accent green */
+    --color-green-deep: #323E1D; /* Deep green */
+
+
+    --color-blue-light: #79C6CD; /* Light blue */
+    --color-blue-dark: #186777; /* Dark blue */
+    --color-blue-accent: #89D2C2; /* Accent blue */
+    --color-blue-deep: #1B2C54; /* Deep blue */
+
+
+    --color-red-light: #F28769; /* Light red/orange */
+    --color-red-dark: #DF4747; /* Dark red */
+    --color-orange-accent: #FACA47; /* Accent orange */
+
+}
+
+.spline-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensures scroll and clicks are unaffected */
+    z-index: -1; /* Place behind the content */
+}
