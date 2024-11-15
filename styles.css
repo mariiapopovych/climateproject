@@ -16,7 +16,7 @@ html, body {
     --gradient-pollution: radial-gradient(circle, #09203f 0%, #537895 100%); /* Pollution */
     --gradient-glaciers: radial-gradient(circle, #a8d8e8 0%, #ffffff 100%); /* Glaciers */
     --gradient-vegetation: radial-gradient(circle, #4caf50 0%, #a5d6a7 100%); /* Vegetation/Animals */
-    --gradient-animals: radial-gradient(circle, #43d24d 0%, #a5d6a7 100%); /* Animals */
+    --gradient-animals: radial-gradient(circle, #43d24d 0%, #6c956e 100%); /* Animals */
     --gradient-temperature: radial-gradient(circle, #ff6600 0%, #ffcc00 100%); /* Temperature */
 
     /* Font Sizes */
@@ -63,22 +63,16 @@ html, body {
 
 .section {
     background: rgba(255, 255, 255, 0.8); 
-    height: 100vh; /* Full viewport height for each section */
+    min-height: 100vh; 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    transition: background-color 0.5s ease; /* Smooth transition */
-
+    justify-content: space-between; 
+    transition: background-color 0.5s ease; 
 }
 
+
 .section-intro {
-    background: var(--gradient-intro);  
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center; /* Center text */
-    transition: background-color 0.5s ease; /* Smooth transition */
+    background: var(--gradient-intro); 
 
 }
 
