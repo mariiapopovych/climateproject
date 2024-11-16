@@ -1,11 +1,23 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden; 
+}
 
 :root {
     /* Climate Change Radial Gradients */
-    --gradient-solar-temperature: radial-gradient(circle, #ffcc00 0%, #ff6600 100%); /* Solar/Temperature */
+    --gradient-intro: radial-gradient(circle, white 0%, rgba(255, 255, 255, 0.8) 100%);
+    --gradient-solar: radial-gradient(circle, #ffcc00 0%, #ff6600 100%); /* Solar/Temperature */
     --gradient-sea-level: radial-gradient(circle, #00aaff 0%, #005577 100%); /* Sea Level */
     --gradient-pollution: radial-gradient(circle, #09203f 0%, #537895 100%); /* Pollution */
     --gradient-glaciers: radial-gradient(circle, #a8d8e8 0%, #ffffff 100%); /* Glaciers */
-    --gradient-vegetation-animals: radial-gradient(circle, #4caf50 0%, #a5d6a7 100%); /* Vegetation/Animals */
+    --gradient-vegetation: radial-gradient(circle, #4caf50 0%, #a5d6a7 100%); /* Vegetation/Animals */
+    --gradient-animals: radial-gradient(circle, #43d24d 0%, #6c956e 100%); /* Animals */
+    --gradient-temperature: radial-gradient(circle, #ff6600 0%, #ffcc00 100%); /* Temperature */
 
     /* Font Sizes */
     --font-size-small: 0.875rem; /* Small text size */
@@ -46,5 +58,48 @@
     width: 100%;
     height: 100%;
     pointer-events: none; /* Ensures scroll and clicks are unaffected */
-    z-index: -1; /* Place behind the content */
+    z-index: 1; /* Place behind the content */
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.8); 
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    transition: background-color 0.5s ease; 
+}
+
+
+.section-intro {
+    background: var(--gradient-intro); 
+
+}
+
+.section-pollution {
+    background: var(--gradient-pollution);
+}
+
+.section-animals {
+    background: var(--gradient-animals);
+}
+
+.section-vegetation {
+    background: var(--gradient-vegetation);
+}
+
+.section-sea-level {
+    background: var(--gradient-sea-level);
+}
+
+.section-glaciers {
+    background: var(--gradient-glaciers);
+}
+
+.section-solar {
+    background: var(--gradient-solar);
+}
+
+.section-temperature {
+    background: var(--gradient-temperature);
 }
