@@ -103,3 +103,8 @@ html, body {
 .section-temperature {
     background: var(--gradient-temperature);
 }
+
+strong{
+    font: var(--font-size-large)
+    var(--font-family-sans)
+}
