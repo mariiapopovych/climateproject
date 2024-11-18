@@ -71,9 +71,23 @@ html, body {
 }
 
 
-.section-intro {
+.section-intro, .section-pollution, .section-sea-level, .section-animals, .section-glaciers, .section-solar, .section-vegetation, .section-temperature {
     background: var(--gradient-intro); 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    padding: 10vh 5vw;
+}
 
+h1 {
+    font-size: var(--font-size-xlarge);
+    width: 50vw;
+    color: var(--color-blue-dark)
+}
+
+p {
+    font-size: var(--font-size-large);
+    width: 30vw;
 }
 
 .section-pollution {
@@ -107,4 +121,17 @@ html, body {
 strong{
     font: var(--font-size-large)
     var(--font-family-sans)
+}
+
+
+.left {
+    align-self: flex-start;
+}
+
+.right {
+    align-self: flex-end;
+}
+
+.title {
+    font-size: var(--font-size-xlarge);
 }
