@@ -57,8 +57,19 @@ html, body {
     width: 100vw; /* Use viewport width */
     height: 100vh; /* Use viewport height */
     pointer-events: auto; /* Allow content to be clickable */
+    z-index: 2;
+}
+
+.spiral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width of the page */
+    height: 100%; /* Default to full height of the content */
+    pointer-events: auto; /* Allow interactivity */
     z-index: 1;
 }
+
 
 
 .section {
