@@ -84,6 +84,19 @@ html, body {
     align-items: center;
     justify-content: space-between; 
     transition: background-color 0.5s ease; 
+    position: relative;
+    overflow: hidden;
+}
+
+.section::before {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Cover the entire section */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.5) 100%); /* Lighter vignette effect */
+    z-index: 0; /* Place it above the background but below the content */
 }
 
 
@@ -114,28 +127,44 @@ p {
 }
 
 .section-pollution {
-    background: var(--gradient-pollution);
+    /* background: var(--gradient-pollution); */
+    background-image: url('./assets/images/pollution.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
 }
 
 .section-animals {
-    background: var(--gradient-animals);
+    /* background: var(--gradient-animals); */
+    background-image: url('./assets/images/deer.jpg'); /* Replace with your image path */
+    background-size: auto;
+    background-position: center;
 }
 
 .section-vegetation {
-    background: var(--gradient-vegetation);
+    /* background: var(--gradient-vegetation); */
+    background-image: url('./assets/images/bear.jpg'); /* Replace with your image path */
+    background-size: auto;
+    background-position: center;
 }
 
 .section-sea-level {
-    background: var(--gradient-sea-level);
+    /* background: var(--gradient-sea-level); */
+    background-image: url('./assets/images/water.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
     
 }
 
 .section-glaciers {
-    background: var(--gradient-glaciers);
+    /* background: var(--gradient-glaciers); */
+    background-image: url('./assets/images/glacier.jpg'); /* Replace with your image path */
+    background-size: auto;
+    background-position: center;
 }
 
 .section-solar {
     background: var(--gradient-solar);
+
 }
 
 .section-temperature {
