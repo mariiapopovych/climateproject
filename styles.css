@@ -24,7 +24,8 @@ html, body {
     --font-size-small: 0.875rem; /* Small text size */
     --font-size-medium: 1rem; /* Medium text size */
     --font-size-large: 1.5rem; /* Large text size */
-    --font-size-xlarge: 5rem; /* Extra large text size */
+    --font-size-xlarge: 2.5rem;
+    --font-size-xxlarge: 5rem; /* Extra large text size */
 
     /* Font families */
     --font-family-sans: 'Helvetica Neue', Arial, sans-serif; /* Sans-serif font family */
@@ -95,7 +96,7 @@ html, body {
 }
 
 h1 {
-    font-size: var(--font-size-xlarge);
+    font-size: var(--font-size-xxlarge);
     width: 50vw;
     color: var(--color-blue-dark);
     font-family: var(--font-family-bebas);
@@ -155,7 +156,7 @@ strong{
 }
 
 .title {
-    font-size: var(--font-size-xlarge);
+    font-size: var(--font-size-xxlarge);
 }
 
 /* .box-1 {
@@ -163,3 +164,10 @@ strong{
     border-radius: 20px;
     padding: 1vh 1vw;
 } */
+
+.highlight {
+    font-weight: bold; /* Make text bold */
+    color: var(--color-orange-accent); /* Change color to your preference */
+    font-family: var(--font-family-bebas);
+    font-size: var(--font-size-xlarge);
+}
