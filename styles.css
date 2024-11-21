@@ -128,28 +128,28 @@ p {
 
 .section-pollution {
     /* background: var(--gradient-pollution); */
-    background-image: url('./assets/images/pollution.jpg'); /* Replace with your image path */
+    background-image: url('./assets/images/pollution.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .section-animals {
     /* background: var(--gradient-animals); */
-    background-image: url('./assets/images/deer.jpg'); /* Replace with your image path */
-    background-size: auto;
+    background-image: url('./assets/images/deer.jpg'); 
+    background-size: cover;
     background-position: center;
 }
 
 .section-vegetation {
     /* background: var(--gradient-vegetation); */
-    background-image: url('./assets/images/bear.jpg'); /* Replace with your image path */
-    background-size: auto;
+    background-image: url('./assets/images/bear.jpg'); 
+    background-size: cover;
     background-position: center;
 }
 
 .section-sea-level {
     /* background: var(--gradient-sea-level); */
-    background-image: url('./assets/images/water.jpg'); /* Replace with your image path */
+    background-image: url('./assets/images/water.jpg'); 
     background-size: cover;
     background-position: center;
     
@@ -157,8 +157,8 @@ p {
 
 .section-glaciers {
     /* background: var(--gradient-glaciers); */
-    background-image: url('./assets/images/glacier.jpg'); /* Replace with your image path */
-    background-size: auto;
+    background-image: url('./assets/images/glacier.jpg'); 
+    background-size: cover;
     background-position: center;
 }
 
@@ -196,8 +196,8 @@ strong{
 } */
 
 .highlight {
-    font-weight: bold; /* Make text bold */
-    color: var(--color-orange-accent); /* Change color to your preference */
+    font-weight: bold; 
+    color: var(--color-orange-accent); 
     font-family: var(--font-family-bebas);
     font-size: var(--font-size-xlarge);
 }
