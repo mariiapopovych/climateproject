@@ -15,5 +15,9 @@ function updateActiveSection() {
     });
 }
 
+AOS.init({
+    duration: 1200, // Animation duration
+});
+
 // Add event listener for scroll
 window.addEventListener('scroll', updateActiveSection);

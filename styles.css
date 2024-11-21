@@ -8,6 +8,7 @@ html, body {
     overflow-x: hidden; 
 }
 
+
 :root {
     /* Climate Change Radial Gradients */
     --gradient-intro: radial-gradient(circle, white 0%, rgba(255, 255, 255, 0.8) 100%);
@@ -23,10 +24,13 @@ html, body {
     --font-size-small: 0.875rem; /* Small text size */
     --font-size-medium: 1rem; /* Medium text size */
     --font-size-large: 1.5rem; /* Large text size */
-    --font-size-xlarge: 3rem; /* Extra large text size */
+    --font-size-xlarge: 5rem; /* Extra large text size */
 
     /* Font families */
     --font-family-sans: 'Helvetica Neue', Arial, sans-serif; /* Sans-serif font family */
+    --font-family-outfit: 'Outfit', sans-serif;
+    --font-family-bebas: 'Bebas Neue', sans-serif;
+    --font-family-poppins: "Poppins", sans-serif;
     
     /* Colors */
     --color-primary: black;
@@ -93,12 +97,19 @@ html, body {
 h1 {
     font-size: var(--font-size-xlarge);
     width: 50vw;
-    color: var(--color-blue-dark)
+    color: var(--color-blue-dark);
+    font-family: var(--font-family-bebas);
+}
+
+h2 {
+    font-size: var(--font-size-large);
+    font-family: var(--font-family-bebas);
 }
 
 p {
     font-size: var(--font-size-large);
     width: 30vw;
+    font-family: var(--font-family-poppins)
 }
 
 .section-pollution {
@@ -146,3 +157,9 @@ strong{
 .title {
     font-size: var(--font-size-xlarge);
 }
+
+/* .box-1 {
+    background-color: var(--color-secondary);
+    border-radius: 20px;
+    padding: 1vh 1vw;
+} */
