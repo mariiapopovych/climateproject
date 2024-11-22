@@ -106,6 +106,7 @@ html, body {
         z-index: 1;
         filter: blur(2px);
     }
+
 }
 
 .section::before {
@@ -355,4 +356,33 @@ a {
 
 a:hover {
     color: var(--color-secondary)
+}
+
+.scroll-to-top {
+    position: fixed; 
+    bottom: 10vh; /* Distance from the bottom */
+    right: 2vw; /* Distance from the right */
+    background-color: var(--color-secondary); /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 8px 17px; /* Padding for the button */
+    font-size: 1.5rem; 
+    cursor: pointer; 
+    display: none; 
+    z-index: 1000; 
+    border-radius: 50px;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.scroll-to-top:hover {
+    background-color: var(--color-blue-dark);
+    color: var(--color-secondary)
+}
+
+.scroll-to-top.clicked {
+    background-color: var(--color-blue-light); /* Change background color on click */
+    transform: scale(1.1); /* Slightly increase size */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
 }
