@@ -123,7 +123,9 @@ h2 {
 p {
     font-size: var(--font-size-large);
     width: 30vw;
-    font-family: var(--font-family-poppins)
+    font-family: var(--font-family-poppins);
+    color: var(--color-secondary);
+    font-weight:400
 }
 
 .section-pollution {
@@ -135,7 +137,7 @@ p {
 
 .section-animals {
     /* background: var(--gradient-animals); */
-    background-image: url('./assets/images/deer.jpg'); 
+    background-image: url('./assets/images/deer-2.jpg'); 
     background-size: cover;
     background-position: center;
 }
@@ -163,7 +165,10 @@ p {
 }
 
 .section-solar {
-    background: var(--gradient-solar);
+    /* background: var(--gradient-solar); */
+    background-image: url('./assets/images/fire.png'); 
+    background-size: cover;
+    background-position: center;
 
 }
 
@@ -195,9 +200,44 @@ strong{
     padding: 1vh 1vw;
 } */
 
-.highlight {
+.highlight-orange, .highlight-blue, .highlight-green, .highlight-dark-blue, .highlight-red {
     font-weight: bold; 
-    color: var(--color-orange-accent); 
     font-family: var(--font-family-bebas);
     font-size: var(--font-size-xlarge);
+} 
+
+.highlight-orange {
+    color: var(--color-orange-accent); 
+}
+
+.highlight-blue{
+    color: var(--color-blue-accent); 
+}
+
+.highlight-green{
+    color: var(--color-green-accent); 
+}
+
+.highlight-dark-blue{
+    color: var(--color-blue-deep)
+}
+
+.highlight-red {
+    color: var(--color-red-light);
+}
+
+.orange {
+    color: var(--color-red-light);
+}
+
+.blue {
+    color: var(--color-blue-accent);
+}
+
+.green {
+    color: var(--color-green-accent)
+}
+
+.yellow {
+    color: var(--color-orange-accent)
 }
