@@ -44,8 +44,8 @@ html, body {
 
 
     --color-blue-light: #79C6CD; /* Light blue */
-    --color-blue-dark: #186777; /* Dark blue */
-    --color-blue-accent: #89D2C2; /* Accent blue */
+    --color-blue-dark: #258294; /* Dark blue 186777*/
+    --color-blue-accent: #89D2C2; /* Accent blue  186777*/
     --color-blue-deep: #1B2C54; /* Deep blue */
 
 
@@ -86,6 +86,7 @@ html, body {
     transition: background-color 0.5s ease; 
     position: relative;
     overflow: hidden;
+    pointer-events: none; 
 }
 
 .section::before {
@@ -133,7 +134,11 @@ p {
     background-image: url('./assets/images/pollution.jpg');
     background-size: cover;
     background-position: center;
+
+    
 }
+
+
 
 .section-animals {
     /* background: var(--gradient-animals); */
@@ -158,10 +163,29 @@ p {
 }
 
 .section-glaciers {
-    /* background: var(--gradient-glaciers); */
-    background-image: url('./assets/images/glacier.jpg'); 
-    background-size: cover;
-    background-position: center;
+    position: relative; /* Position relative to allow absolute positioning of the vignette */
+    overflow: hidden; /* Hide overflow to keep vignette within bounds */
+    padding: 10vh 5vw; /* Add padding for content */
+}
+
+.section-glaciers::before {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Cover the entire section */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/images/glacier-4.jpg'); /* Adjust the path as necessary */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    filter: blur(5px); /* Apply blur effect to the background image */
+    z-index: 0; /* Place it below the content */
+}
+
+.section-glaciers h2,
+.section-glaciers p {
+    position: relative; /* Ensure text is above the blurred background */
+    z-index: 1; /* Ensure content is above the blurred background */
 }
 
 .section-solar {
@@ -200,7 +224,7 @@ strong{
     padding: 1vh 1vw;
 } */
 
-.highlight-orange, .highlight-blue, .highlight-green, .highlight-dark-blue, .highlight-red {
+.highlight-orange, .highlight-blue, .highlight-green, .highlight-dark-blue, .highlight-red, .highlight-blue-green, .highlight-white {
     font-weight: bold; 
     font-family: var(--font-family-bebas);
     font-size: var(--font-size-xlarge);
@@ -210,6 +234,7 @@ strong{
     color: var(--color-orange-accent); 
 }
 
+
 .highlight-blue{
     color: var(--color-blue-accent); 
 }
@@ -218,10 +243,17 @@ strong{
     color: var(--color-green-accent); 
 }
 
+.highlight-blue-green{
+    color: var(--color-blue-dark); 
+}
+
 .highlight-dark-blue{
     color: var(--color-blue-deep)
 }
 
+.highlight-white{
+    color: rgb(151, 225, 222)
+}
 .highlight-red {
     color: var(--color-red-light);
 }
@@ -241,3 +273,8 @@ strong{
 .yellow {
     color: var(--color-orange-accent)
 }
+
+.white {
+    color: var(--color-secondary);
+}
+
