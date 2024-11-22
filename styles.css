@@ -8,6 +8,7 @@ html, body {
     overflow-x: hidden; 
 }
 
+
 :root {
     /* Climate Change Radial Gradients */
     --gradient-intro: radial-gradient(circle, white 0%, rgba(255, 255, 255, 0.8) 100%);
@@ -23,10 +24,14 @@ html, body {
     --font-size-small: 0.875rem; /* Small text size */
     --font-size-medium: 1rem; /* Medium text size */
     --font-size-large: 1.5rem; /* Large text size */
-    --font-size-xlarge: 3rem; /* Extra large text size */
+    --font-size-xlarge: 2.5rem;
+    --font-size-xxlarge: 5rem; /* Extra large text size */
 
     /* Font families */
     --font-family-sans: 'Helvetica Neue', Arial, sans-serif; /* Sans-serif font family */
+    --font-family-outfit: 'Outfit', sans-serif;
+    --font-family-bebas: 'Bebas Neue', sans-serif;
+    --font-family-poppins: "Poppins", sans-serif;
     
     /* Colors */
     --color-primary: black;
@@ -39,8 +44,8 @@ html, body {
 
 
     --color-blue-light: #79C6CD; /* Light blue */
-    --color-blue-dark: #186777; /* Dark blue */
-    --color-blue-accent: #89D2C2; /* Accent blue */
+    --color-blue-dark: #258294; /* Dark blue 186777*/
+    --color-blue-accent: #89D2C2; /* Accent blue  186777*/
     --color-blue-deep: #1B2C54; /* Deep blue */
 
 
@@ -79,6 +84,40 @@ html, body {
     align-items: center;
     justify-content: space-between; 
     transition: background-color 0.5s ease; 
+    position: relative;
+    overflow: hidden;
+    pointer-events: none; 
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) { /* Adjust the max-width as needed */
+    .section {
+        flex-direction: column; /* Change to column direction */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .section p {
+        width: 100%; /* Make paragraphs take full width */
+        margin-bottom: 10px; /* Add some space between paragraphs */
+        z-index: 10;
+    }
+
+    .spline-container{
+        z-index: 1;
+        filter: blur(2px);
+    }
+
+}
+
+.section::before {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Cover the entire section */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.5) 100%); /* Lighter vignette effect */
+    z-index: 0; /* Place it above the background but below the content */
 }
 
 
@@ -91,38 +130,115 @@ html, body {
 }
 
 h1 {
-    font-size: var(--font-size-xlarge);
+    font-size: var(--font-size-xxlarge);
     width: 50vw;
-    color: var(--color-blue-dark)
+    color: var(--color-blue-dark);
+    font-family: var(--font-family-bebas);
+    z-index: 10;
+}
+
+h2 {
+    font-size: var(--font-size-large);
+    font-family: var(--font-family-bebas);
+    z-index: 10;
 }
 
 p {
     font-size: var(--font-size-large);
     width: 30vw;
+    font-family: var(--font-family-poppins);
+    color: var(--color-secondary);
+    font-weight:400
 }
 
 .section-pollution {
-    background: var(--gradient-pollution);
+    /* background: var(--gradient-pollution); */
+    background-image: url('./assets/images/pollution.jpg');
+    background-size: cover;
+    background-position: center;
+
+    
 }
 
+
+
 .section-animals {
-    background: var(--gradient-animals);
+    /* background: var(--gradient-animals); */
+    /* background-image: url('./assets/images/deer-2.jpg');  */
+    /* background-size: cover;
+    background-position: center; */
+    position: relative; /* Position relative to allow absolute positioning of the vignette */
+    overflow: hidden; /* Hide overflow to keep vignette within bounds */
+}
+
+.section-animals::before{
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Cover the entire section */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./assets/images/deer-2.jpg'); 
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    filter: blur(5px); /* Apply blur effect to the background image */
+    z-index: 0; /* Place it below the content */
+}
+
+.section-animals h2,
+.section-animals p {
+    position: relative; /* Ensure text is above the blurred background */
+    z-index: 1; /* Ensure content is above the blurred background */
 }
 
 .section-vegetation {
-    background: var(--gradient-vegetation);
+    /* background: var(--gradient-vegetation); */
+    background-image: url('./assets/images/bear.jpg'); 
+    background-size: cover;
+    background-position: center;
 }
 
 .section-sea-level {
-    background: var(--gradient-sea-level);
+    /* background: var(--gradient-sea-level); */
+    background-image: url('./assets/images/house-5.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    
 }
 
+
 .section-glaciers {
-    background: var(--gradient-glaciers);
+    position: relative; /* Position relative to allow absolute positioning of the vignette */
+    overflow: hidden; /* Hide overflow to keep vignette within bounds */
+    padding: 10vh 5vw; /* Add padding for content */
+}
+
+.section-glaciers::before {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Cover the entire section */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/images/glacier-4.jpg'); /* Adjust the path as necessary */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    filter: blur(5px); /* Apply blur effect to the background image */
+    z-index: 0; /* Place it below the content */
+}
+
+.section-glaciers h2,
+.section-glaciers p {
+    position: relative; /* Ensure text is above the blurred background */
+    z-index: 1; /* Ensure content is above the blurred background */
 }
 
 .section-solar {
-    background: var(--gradient-solar);
+    /* background: var(--gradient-solar); */
+    background-image: url('./assets/images/fire.png'); 
+    background-size: cover;
+    background-position: center;
+
 }
 
 .section-temperature {
@@ -144,5 +260,129 @@ strong{
 }
 
 .title {
+    font-size: var(--font-size-xxlarge);
+}
+
+/* .box-1 {
+    background-color: var(--color-secondary);
+    border-radius: 20px;
+    padding: 1vh 1vw;
+} */
+
+.highlight-orange, .highlight-blue, .highlight-green, .highlight-dark-blue, .highlight-red, .highlight-blue-green, .highlight-white {
+    font-weight: bold; 
+    font-family: var(--font-family-bebas);
     font-size: var(--font-size-xlarge);
+} 
+
+.highlight-orange {
+    color: var(--color-orange-accent); 
+}
+
+
+.highlight-blue{
+    color: var(--color-blue-accent); 
+}
+
+.highlight-green{
+    color: var(--color-green-accent); 
+}
+
+.highlight-blue-green{
+    color: var(--color-blue-dark); 
+}
+
+.highlight-dark-blue{
+    color: var(--color-blue-deep)
+}
+
+.highlight-white{
+    color: rgb(151, 225, 222)
+}
+.highlight-red {
+    color: var(--color-red-light);
+}
+
+.orange {
+    color: var(--color-red-light);
+}
+
+.blue {
+    color: var(--color-blue-accent);
+}
+
+.dark-blue {
+    color: var(--color-blue-dark);
+}
+
+.green {
+    color: var(--color-green-accent)
+}
+
+.yellow {
+    color: var(--color-orange-accent)
+}
+
+.white {
+    color: var(--color-secondary);
+}
+
+.scroll-to-explore {
+    text-align: center; 
+    margin-top: 10px; 
+}
+
+.arrow-down {
+    font-size: 2rem; 
+    animation: bounce 1.5s infinite;
+}
+
+/* Keyframes for animations */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px); /* Move up */
+    }
+    60% {
+        transform: translateY(-5px); /* Move down */
+    }
+}
+
+a {
+    color: var(--color-red-dark);
+}
+
+a:hover {
+    color: var(--color-secondary)
+}
+
+.scroll-to-top {
+    position: fixed; 
+    bottom: 10vh; /* Distance from the bottom */
+    right: 2vw; /* Distance from the right */
+    background-color: var(--color-secondary); /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 8px 17px; /* Padding for the button */
+    font-size: 1.5rem; 
+    cursor: pointer; 
+    display: none; 
+    z-index: 1000; 
+    border-radius: 50px;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.scroll-to-top:hover {
+    background-color: var(--color-blue-dark);
+    color: var(--color-secondary)
+}
+
+.scroll-to-top.clicked {
+    background-color: var(--color-blue-light); /* Change background color on click */
+    transform: scale(1.1); /* Slightly increase size */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
 }
