@@ -329,3 +329,11 @@ strong{
         transform: translateY(-5px); /* Move down */
     }
 }
+
+a {
+    color: var(--color-red-dark);
+}
+
+a:hover {
+    color: var(--color-secondary)
+}
