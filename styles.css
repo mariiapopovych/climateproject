@@ -89,6 +89,25 @@ html, body {
     pointer-events: none; 
 }
 
+/* Media query for mobile devices */
+@media (max-width: 768px) { /* Adjust the max-width as needed */
+    .section {
+        flex-direction: column; /* Change to column direction */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .section p {
+        width: 100%; /* Make paragraphs take full width */
+        margin-bottom: 10px; /* Add some space between paragraphs */
+        z-index: 10;
+    }
+
+    .spline-container{
+        z-index: 1;
+        filter: blur(2px);
+    }
+}
+
 .section::before {
     content: ''; /* Required for pseudo-element */
     position: absolute; /* Position it absolutely */
