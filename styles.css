@@ -61,19 +61,10 @@ html, body {
     left: 0;
     width: 100vw; /* Use viewport width */
     height: 100vh; /* Use viewport height */
-    pointer-events: auto; /* Allow content to be clickable */
-    z-index: 2;
+    pointer-events: none; /* Allow content to be clickable */
+    z-index: 3;
 }
 
-.spiral {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw; /* Full width of the page */
-    height: 100%; /* Default to full height of the content */
-    pointer-events: auto; /* Allow interactivity */
-    z-index: 1;
-}
 
 
 
@@ -350,13 +341,34 @@ strong{
     }
 }
 
-a {
-    color: var(--color-red-dark);
+.container {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: flex-end; /* Place items at the bottom */
+    align-items: center; /* Center items horizontally */
+    height: 100vh; /* Full height for demonstration */
+    width: 100vw; /* Full width for demonstration */
+    background-color: var(--color-background); /* Optional for visibility */
+    padding: 20px; /* Optional: Adds spacing around links */
+    box-sizing: border-box;
 }
 
-a:hover {
-    color: var(--color-secondary)
+.link {
+    color: var(--color-red-dark);
+    font-size: var(--font-size-large);
+    font-family: var(--font-family-poppins);
+    font-weight: 400;
+    margin: 10px 0; /* Space between links */
+    text-align: center; /* Center text inside the links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    pointer-events: all;
+    z-index: 2;
 }
+
+.link:hover {
+    color: var(--color-secondary);
+}
+
 
 .scroll-to-top {
     position: fixed; 
